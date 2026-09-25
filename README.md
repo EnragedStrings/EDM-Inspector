@@ -14,7 +14,8 @@ Download: [latest release](../../releases/latest), one file named `EDM-Inspector
 - Properties panel with the values of the selected node.
 - Textures panel showing every material and its textures, read from loose files or DCS texture zips. Open any texture in a viewer with per-channel view (R, G, B, A), size, format, mip count and file location.
 - Assets panel listing every model in your DCS install and mods (over 5,000). Double-click one to open it. LOD and damage variants are grouped, and the viewport can switch between LODs.
-- Clickable data: reads a cockpit's `clickabledata.lua`, lists each control with its argument and action, shows it on hover in the viewport, and selects the parts it drives.
+- Clickable data: reads a cockpit's `clickabledata.lua`, lists each control with its argument and action, shows it on hover in the viewport, and selects the parts it drives. Buttons, 2 and 3 position switches and dials can be pressed to see them move.
+- Exterior controls: on an exterior model the same panel lists the landing gear handle, flaps, slats, speed brake, canopy, hook, probe and more, found from the animated parts, so you can lower the gear or step the flaps.
 - Collision shapes and model boxes can be drawn in the viewport.
 - Arguments panel with a slider for every animation argument, including Lua argument names. Scrub them or play them to see the model animate.
 
@@ -44,7 +45,8 @@ Download: [latest release](../../releases/latest), one file named `EDM-Inspector
 - Measure distance and true bearing, get flight time, and draw an elevation profile with line of sight.
 - Export airfields, navaids and towns to CSV, GeoJSON or KML. Export roads as GeoJSON or Blender-ready OBJ lines. Export a single airfield as SVG. Export relief as a heightmap PNG, ESRI ASCII grid or OBJ mesh.
 - Open a map in 3D in the main viewport: the real terrain mesh (read from the map's `.surface5` file), roads, airfields with runways, towns and navigation aids, each with an eye toggle and click-to-select.
-- The real terrain mesh is an early version (sea gaps, coarsest level only). Static objects placed on the map and their models are not read yet.
+- Load finer terrain detail around the view centre, with the sea drawn flat at height 0 and no seams between tiles.
+- Load the scenery DCS places on the map (buildings, hangars, walls, fences, poles, towers, and optionally trees) with the map's own models and textures. Objects of one kind are merged into one Outliner entry that can be shown, hidden, selected and exported.
 
 ### DLL Explorer
 - Opens a mod DLL through Ghidra and lists its functions, classes, strings, imported libraries and exports.
@@ -52,6 +54,8 @@ Download: [latest release](../../releases/latest), one file named `EDM-Inspector
 - Makes C++ names readable and checks imported names against the DLL they come from (for example EDCORE.DLL in your DCS folder).
 - Decompiles a function on demand and remembers the result.
 - Flag any item and attach a status and a note. Notes are kept per DLL.
+- Open in VS Code writes one `.c` file per function and opens the folder. What you save there shows up in the explorer as Live Code, and edited functions are marked in the list.
+- Opens as a tab beside the viewport.
 - Export a DLL, its dependencies, a Ghidra project and a ready-made prompt as one zip to hand to an AI, then import the AI's answers back next to your own notes.
 
 ### Viewport controls
