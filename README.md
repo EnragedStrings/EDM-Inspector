@@ -27,6 +27,22 @@ Download: [latest release](../../releases/latest), one file named `EDM-Inspector
 - Structural editing: add groups, transforms, animated nodes and connectors, duplicate, delete and re-parent nodes. Every index is renumbered for you, each edit is validated and can be undone.
 - Livery manager: lists every livery of an aircraft, previews one on the model, and edits `description.lua`.
 
+### Cockpit building
+- Vertex mode: pick vertices, edges, faces or whole pieces, by clicking or box selecting (also through the model).
+- Group the picks, with the connectors and lights in them, and move, rotate or scale the group without disturbing anything else. Delete a group with its contents, cutting only its part out of shared meshes.
+- Centre of Picks shows the centre, size and facing of the picks. Axis from Picks fits a hinge axis to them, drawn as an arrow you can flip, copy and turn.
+- Animate Group turns a group into a working control on an argument: toggle, rotary selector, dial, knob or push button.
+- Variants lists the versions of parts an argument switches between (such as the A-10C II's two radios) and builds new switches.
+- Import another .edm into the open model as a group.
+- Light layers add backlighting and warning lights over a panel: a texture an argument fades in, made the way DCS makes its own lamps.
+- New animations and arguments are saved in a form the DCS ModelViewer lists and plays.
+
+### Body animation
+- Animates skinned bodies such as pilots and ground crew on their skeleton, with body parts found from the bone names or set by picking vertices.
+- Built-in walk, idle, head look and ground crew marshalling signals, each on its own argument and on the body parts you choose, so several play together.
+- Turn the head to look at a point, and clear a model's animation to start from its rest pose.
+- Make your own animations from keys, posing each joint, with mirroring and a live preview. Your animations are kept for every model.
+
 ### Blender
 - Export a model or a selection to a `.blend` file with meshes, materials, skinning and animation baked as keyframes on the objects.
 - Bring edited keyframes, vertex positions, normals and UVs back from Blender into the `.edm`.
